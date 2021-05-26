@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            font-size: 30px;
+        }
+
+        .calc {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: seagreen;
+            width: 50vw;
+            background-color: lavender;
+            margin: 20px auto;
+            padding: 20px;
+            letter-spacing: 2px;
+        }
+
+        .form-group {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            column-gap: 5px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: seagreen;
+            color: #fff;
+            font-size: 25px;
+            border: none;
+            padding: 15px 30px;
+            letter-spacing: 2px;
+        }
+
+        #operator {
+            font-size: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="calc green-bg" id="calc">
+        <h1>CALCULATOR</h1>
+        <div class="form-group">
+            <label for="first-number">Enter first number</label>
+            <input type="number" id="first-number" required >
+        </div>
+        <div class="form-group">
+           <label for="second-number">Enter second number</label>
+           <input type="number" id="second-number" required> 
+        </div>
+        <div class="form-group">
+            <label for="operator">Choose the operator</label>
+            <select id="operator" required>
+                <option value="+">&plus;</option>
+                <option value="-">&minus;</option>
+                <option value="/">&divide;</option>
+                <option value="*">&times;</option>
+            </select>
+
+        </div>      
+        <button id="btn">CALCULATE</button>
+    </div>
+    <script src="calculate.js"></script>
+</body>
+</html>
